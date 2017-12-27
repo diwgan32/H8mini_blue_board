@@ -269,14 +269,12 @@ void control( void)
 
 		angleerror[0] = errorvect[0] * RADTODEG;// - attitude[0] + (float) TRIM_ROLL;
 		angleerror[1] = errorvect[1] * RADTODEG;// - attitude[1] + (float) TRIM_PITCH;
+		angleerror[2] = errorvect[2] * RADTODEG
 
 		for ( int i = 0 ; i < 2; i++)
 		{
 			error[i] = apid(i) + yawerror[i] - gyro[i];
 		}
-		
-		error[2] = yawerror[2]  - gyro[2];
-
 	}
 	else
 	{	// rate mode
